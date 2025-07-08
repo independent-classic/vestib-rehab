@@ -13,8 +13,8 @@ const defaultSettings: AppSettings = {
   background: {
     type: "color",
     color: "#000000",
-    image: "src/assets/static-bg/bg1.png",
-    videoSrc: "src/assets/moving-bg/bg1.mp4",
+    image: "/assets/static-bg/bg1.png",
+    videoSrc: "/assets/moving-bg/bg1.mp4",
   },
   saccades: {
     mode: "stationary",

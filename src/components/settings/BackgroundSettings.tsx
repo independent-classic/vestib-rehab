@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import BackgroundAssetPreview from "./BackgroundAssetPreview";
 
 interface BackgroundSettingsProps {
   backgroundType: "color" | "scenery" | "animated";
@@ -65,11 +66,7 @@ const BackgroundSettings: React.FC<BackgroundSettingsProps> = ({
                         setShowPicker(false);
                       }}
                     >
-                      {backgroundType === "scenery" ? (
-                        <img src={src} alt="Background option" className="w-full h-24 object-cover" />
-                      ) : (
-                        <video src={src} className="w-full h-24 object-cover" muted loop autoPlay />
-                      )}
+                      <BackgroundAssetPreview src={src} />
                     </div>
                   ))}
                 </div>

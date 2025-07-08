@@ -9,15 +9,7 @@ interface FloatingSettingsPanelProps {
   onChange: (settings: AppSettings) => void;
 }
 
-const staticImages = [
-  { id: 1, src: "src/assets/static-bg/bg1.png", label: "Background 1" },
-  { id: 2, src: "src/assets/static-bg/bg2.png", label: "Background 2" },
-];
-
-const movingVideos = [
-  { id: 1, src: "src/assets/moving-bg/bg1.mp4", label: "Tennis" },
-  { id: 1, src: "src/assets/moving-bg/bg2.mp4", label: "Soccer" },
-];
+import { staticImages, movingVideos } from "./backgroundAssets";
 
 
 
@@ -47,13 +39,13 @@ const FloatingSettingsPanel = ({ onClose, settings, onChange }: FloatingSettings
   // Usage Example
   useEffect(() => {
     preloadImages([
-      'src/assets/static-bg/bg1.png',
-      'src/assets/static-bg/bg2.png'
+      '/assets/static-bg/bg1.png',
+      '/assets/static-bg/bg2.png'
     ]);
 
     preloadVideos([
-      'src/assets/moving-bg/bg1.mp4',
-      'src/assets/moving-bg/bg2.mp4'
+      '/assets/moving-bg/bg1.mp4',
+      '/assets/moving-bg/bg2.mp4'
     ]);
   }, []);
 
