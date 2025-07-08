@@ -28,16 +28,16 @@ const FloatingSettingsPanel = ({ onClose, settings, onChange }: FloatingSettings
   const [showVideoDialog, setShowVideoDialog] = useState(false);
 
   // Preloading images
-  const preloadImages = (staticImages) => {
-    staticImages.forEach((url) => {
+  const preloadImages = (staticImages: string[]) => {
+    staticImages.forEach((url: string) => {
       const img = new Image();
       img.src = url;
     });
   };
 
   // Preloading videos (basic approach: load metadata)
-  const preloadVideos = (movingVideos) => {
-    movingVideos.forEach((url) => {
+  const preloadVideos = (movingVideos: string[]) => {
+    movingVideos.forEach((url: string) => {
       const video = document.createElement('video');
       video.src = url;
       video.preload = 'metadata';

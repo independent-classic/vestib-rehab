@@ -1,6 +1,10 @@
 import { useEffect, useRef } from "react";
 
-const MobileSettingsDrawer = ({ isOpen, onClose, settings, onChange }: Props) => {
+interface MobileSettingsDrawerProps {
+  onClose: () => void;
+}
+
+const MobileSettingsDrawer = ({ onClose }: MobileSettingsDrawerProps) => {
   const drawerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

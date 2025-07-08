@@ -24,10 +24,7 @@ const SettingsWrapper = ({ isOpen, onClose, settings, onChange }: Props) => {
 
   return isMobile ? (
     <MobileSettingsDrawer
-      isOpen={isOpen}
       onClose={onClose}
-      settings={settings}
-      onChange={onChange}
     />
   ) : (
     <FloatingSettingsPanel
