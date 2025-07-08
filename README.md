@@ -1,54 +1,36 @@
-# React + TypeScript + Vite
+# vestib-rehab
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This app provides interactive rehabilitation exercises for vestibular therapy. Each exercise is designed to help users improve eye movement control and visual-vestibular coordination. Below is an overview of the exercises included in the app.
 
-Currently, two official plugins are available:
+## Exercises
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 1. Saccades
+**Purpose:**
+- Saccades exercises train rapid eye movements between two or more fixed points, improving gaze accuracy and reaction time.
 
-## Expanding the ESLint configuration
+**How it works in the app:**
+- The user sees several points on the screen (either stationary, random, or in a sequence).
+- The user is instructed to quickly move their eyes between these points as they appear.
+- Settings allow customization of the number of points, their distance, speed, and color.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 2. Smooth Pursuit
+**Purpose:**
+- Smooth pursuit exercises help users practice following a moving target smoothly with their eyes, which is important for daily activities like reading or tracking moving objects.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+**How it works in the app:**
+- A ball moves smoothly across the screen, bouncing off the edges.
+- The user is instructed to visually track the ball as it moves.
+- The speed and color of the ball can be adjusted in the settings.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 3. VOR/VMS (Vestibulo-Ocular Reflex / Visual Motion Sensitivity)
+**Purpose:**
+- VOR exercises help retrain the reflex that stabilizes vision during head movement, while VMS targets visual motion sensitivity.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+**How it works in the app:**
+- A large letter (usually "A") flashes on and off in the center of the screen at a set rhythm (beats per minute).
+- The user is instructed to keep their eyes on the letter while moving their head side-to-side or up-and-down, depending on therapist instruction.
+- The flash rate and color of the letter can be customized.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+---
+
+For more details on how to use or customize each exercise, see the in-app settings or consult your therapist for recommended protocols.
